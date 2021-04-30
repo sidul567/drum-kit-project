@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 11px;
+}
+body{
+    background: url('pexels-snapwire-6966.jpg') bottom center;
+    background-size: cover;
+}
+.keys{
+    display: flex;
+    min-height: 100vh; 
+    align-items: center;
+    justify-content: center;
+}
+.key{
+    border: .4rem solid #fff;
+    border-radius: .5rem;
+    margin: 1rem;
+    padding: 1rem .5rem;
+    font-size: 1.5rem;
+    width: 10rem;
+    transition: .1s all ease;
+    text-align: center;
+    color: #ffffff;
+}
+.volume-slider{
+    position: absolute;
+    top: 25rem;
+}
+.volume-slider p{
+    font-size: 2rem;
+    color: #000;
+}
+.volume p{
+    display: inline;
+    position: absolute;
+    top: 15px;
+    left: 140px;
+    border: 2px solid black;
+    padding: 3px;
+}
+.slider{
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background: rgb(245, 92, 92);
+    border-radius: 10px;
+    -webkit-appearance: none;
+    outline: none;
+    z-index: 100;
+}
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #e62c2f;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transform: scale(1);
+}
+.slider:active::-webkit-slider-thumb{
+    transform: scale(1.2);
+}
+kbd{
+    display: block;
+    font-size: 4rem;
+}
+.sound{
+    font-size: 1.2rem;
+    color: #106cff;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+.playing{
+    transform: scale(1.1);
+    border: .4rem solid #ff6600;
+    box-shadow: 0 0 1rem #ff6600;
+}
+@media(max-width:360px){
+    .keys{
+        flex-wrap: wrap;
+    }
+    .mt-80{
+        margin-top: 80px;
+    }
+    .volume-slider{
+        top: 0;
+    }
+    .volume-slider p{
+        color: #fff;
+    }
+}
